@@ -8,7 +8,7 @@
 
 Point to the project summary and recurring-friction list.
 
-“These mock preflight runs retain rule outcomes rather than scientific content. The most common finding—raw data not checked in—appears in half of the entries.”
+“These mock entry-check runs retain rule outcomes rather than scientific content. The most common finding—raw data not checked in—appears in half of the entries.”
 
 ## 0:28–0:43 — Show the evidence
 

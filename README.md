@@ -2,6 +2,8 @@
 
 Review Quality Signals is an independent product-engineering prototype exploring a narrow question: after an experiment-entry check catches a problem, how can that structured outcome help improve the workflow that produced it?
 
+**Thesis:** when the same rule fails across scientists, treat it as evidence to improve the workflow—not a reason to blame the individual.
+
 The prototype aggregates privacy-conscious rule outcomes across mock preflight runs, identifies recurring sources of review friction, and recommends a concrete template, schema, or workflow intervention. It deliberately does **not** position entry validation as a missing Benchling capability.
 
 **Live demo:** https://review-quality-signals.vercel.app

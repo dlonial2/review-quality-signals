@@ -25,8 +25,8 @@ export default function HomePage() {
               <span className="rounded-full border border-emerald-400/40 bg-emerald-300/10 px-2.5 py-1">Independent prototype</span>
               <span>Mock data</span>
             </div>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Review Quality Signals</h1>
-            <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">Turn structured pre-review findings into a feedback loop for better templates, schemas, and lab workflows.</p>
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Find the workflow behind repeated review friction.</h1>
+            <p className="mt-2 max-w-4xl text-sm leading-6 text-slate-300">A privacy-conscious extension to Notebook Check and entry validation: aggregate rule outcomes—not scientific content—to reveal which template, schema, or review step to improve.</p>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xs text-slate-300">Cell Line Development</span>
@@ -39,8 +39,23 @@ export default function HomePage() {
       </header>
 
       <div className="mx-auto max-w-[1440px] space-y-6 px-5 py-7 sm:px-8">
+        <section className="grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm lg:grid-cols-[1fr_1.35fr_1fr]">
+          <div className="border-b border-slate-200 p-5 lg:border-b-0 lg:border-r">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Benchling already provides</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Entry validation, Notebook Check, structured review, audit history, and Insights.</p>
+          </div>
+          <div className="border-b border-slate-200 bg-emerald-50 p-5 lg:border-b-0 lg:border-r">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-800">This prototype explores</p>
+            <p className="mt-2 text-sm font-medium leading-6 text-emerald-950">When the same rule fails across scientists, treat it as evidence to improve the workflow—not a reason to blame the individual.</p>
+          </div>
+          <div className="p-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Privacy boundary</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Store rule ID, severity, and timing. Exclude measurements, notes, and attachment contents.</p>
+          </div>
+        </section>
+
         <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          <Metric label="Preflight runs" value={summary.totalRuns.toString()} note="deterministic checks completed" />
+          <Metric label="Entry checks analyzed" value={summary.totalRuns.toString()} note="deterministic rule runs" />
           <Metric label="First-pass ready" value={`${summary.firstPassRate}%`} note={`${summary.totalRuns - runs.filter((run) => run.findings.length > 0).length} entries with no findings`} tone="emerald" />
           <Metric label="Median time to ready" value={`${summary.medianMinutesToReady}m`} note="from first check to clear" />
           <Metric label="Findings generated" value={summary.totalFindings.toString()} note="rule outcomes, not entry content" tone="amber" />
@@ -90,7 +105,7 @@ export default function HomePage() {
 
         <section className="grid gap-6 xl:grid-cols-[1fr_0.42fr]">
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-            <div className="border-b border-slate-200 px-6 py-5"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Evidence</p><h2 className="mt-1 text-xl font-semibold">Recent preflight runs</h2></div>
+            <div className="border-b border-slate-200 px-6 py-5"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Evidence</p><h2 className="mt-1 text-xl font-semibold">Recent entry checks</h2></div>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[720px] text-left text-sm">
                 <thead className="bg-slate-50 text-xs uppercase tracking-[0.1em] text-slate-500"><tr><th className="px-6 py-3 font-medium">Entry</th><th className="px-4 py-3 font-medium">Scientist</th><th className="px-4 py-3 font-medium">Completed</th><th className="px-4 py-3 font-medium">Findings</th><th className="px-6 py-3 text-right font-medium">Time to ready</th></tr></thead>
