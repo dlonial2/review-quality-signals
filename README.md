@@ -4,7 +4,7 @@ Review Quality Signals is an independent product-engineering prototype exploring
 
 The prototype aggregates privacy-conscious rule outcomes across mock preflight runs, identifies recurring sources of review friction, and recommends a concrete template, schema, or workflow intervention. It deliberately does **not** position entry validation as a missing Benchling capability.
 
-**Live demo:** https://benchling.vercel.app
+**Live demo:** https://review-quality-signals.vercel.app
 
 > This project is not affiliated with or endorsed by Benchling. It uses mock data and is based only on public documentation; it does not imply knowledge of Benchling's internal roadmap or customer configurations.
 
